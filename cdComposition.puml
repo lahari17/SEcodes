@@ -24,6 +24,7 @@ class Folder {
     + void printFolderContents()
 }
 
+
 Folder "1" *-- "*" Folder : Contains Sub-folders
 Folder "1" *-- "*" File : Contains Files
 
