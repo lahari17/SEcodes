@@ -1,0 +1,20 @@
+@startuml
+object Instructor {
+    firstName = "Nima"
+    lastName = "Davarpanah"
+    officeNumber = "3-2636"
+}
+
+object Textbook {
+    title = "Clean Code"
+    author = "Robert C. Martin"
+    publisher = "Prentice Hall"
+}
+
+object Course {
+    name = "Advanced Software Engineering"
+}
+
+Course o-- Instructor
+Course o-- Textbook
+@enduml
