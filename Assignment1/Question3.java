@@ -101,15 +101,15 @@ public class Question3 {
     public static void main(String[] args) {
         // Create Instructor objects
         Instructor instructor1 = new Instructor("Nima", "Davarpanah", "3-2636");
-        Instructor instructor2 = new Instructor("John", "Doe", "4-1234");
+        Instructor instructor2 = new Instructor("David", "johannsen", "4-1234");
 
         // Create Textbook objects
         Textbook textbook1 = new Textbook("Clean Code", "Robert C. Martin", "Prentice Hall");
-        Textbook textbook2 = new Textbook("Introduction to Algorithms", "Thomas H. Cormen", "MIT Press");
+        Textbook textbook2 = new Textbook("A Quantitative Approach", "John L. Hennessy and David A. Patterson", "Morgan Kaufmann");
 
         // Create Course objects
-        Course course1 = new Course("Software Engineering", instructor1, textbook1);
-        Course course2 = new Course("Data Structures", instructor2, textbook2);
+        Course course1 = new Course("Advanced Software Engineering", instructor1, textbook1);
+        Course course2 = new Course("Advanced Computer Architecture", instructor2, textbook2);
 
         // Print course information
         System.out.println("Course 1 Information:");
