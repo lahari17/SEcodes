@@ -1,0 +1,19 @@
+@startuml
+object "ship1:Ship" as sh  {
+    shipName = "Example Ship"
+    yearBuilt = "2000"
+}
+
+object "CruiseShip1:CruiseShip" as crsh {
+    shipName = "Example Cruise Ship"
+    maxNumberPassengers = 2000
+}
+
+object "CargoShip1:CargoShip" as cash {
+    shipName = "Example Cargo Ship"
+    cargoCapacityInTonnage = 5000
+}
+
+sh <|-- crsh
+sh <|-- cash
+@enduml
