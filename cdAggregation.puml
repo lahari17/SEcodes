@@ -1,19 +1,49 @@
 @startuml
-object Ship {
-    shipName = "Example Ship"
-    yearBuilt = "2000"
+
+class Instructor {
+    - String firstName
+    - String lastName
+    - String officeNumber
+    + String getFirstName()
+    + void setFirstName(String firstName)
+    + String getLastName()
+    + void setLastName(String lastName)
+    + String getOfficeNumber()
+    + void setOfficeNumber(String officeNumber)
+    + toString()
 }
 
-object CruiseShip {
-    shipName = "Example Cruise Ship"
-    maxNumberPassengers = 2000
+class Textbook {
+    - String title
+    - String author
+    - String publisher
+    + String getTitle()
+    + void setTitle(String title)
+    + String getAuthor()
+    + void setAuthor(String author)
+    + String getPublisher()
+    + void setPublisher(String publisher)
+    + toString()
 }
 
-object CargoShip {
-    shipName = "Example Cargo Ship"
-    cargoCapacityInTonnage = 5000
+class Course {
+    - String name
+    - ArrayList<Instructor> instructors
+    - ArrayList<Textbook> textbooks
+    + Course()
+    + String getName()
+    + void setName(String name)
+    + void addInstructor(Instructor instructor)
+    + void removeInstructor(Instructor instructor)
+    + ArrayList<Instructor> getInstructors()
+    + void addTextbook(Textbook textbook)
+    + void removeTextbook(Textbook textbook)
+    + ArrayList<Textbook> getTextbooks()
+    + toString()
+    + void printCourse()
 }
 
-Ship <|-- CruiseShip
-Ship <|-- CargoShip
+Instructor --o Course : "teaches"
+Textbook --o Course : "refers"
+
 @enduml

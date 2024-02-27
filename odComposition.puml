@@ -1,55 +1,55 @@
 @startuml
-object phpDemo1 {
+object "demo:phpDemo1" as dem  {
 name = "php_demo1"
 subfolders: ArrayList<Folder> = [Source Files, Include Path, Remote Files]
 files: ArrayList<File> = []
 }
-object sourceFiles {
+object "sourcef:sourceFiles" as sf{
 name = "Source Files"
 subfolders: ArrayList<Folder> = [.phalcon, cache, public]
 files: ArrayList<File> = []
 }
-object includePath {
+object "path:includePath" as ip {
 name = "Include Path"
 subfolders: ArrayList<Folder> = []
 files: ArrayList<File> = []
 }
-object remoteFiles {
+object "rmfiles:remoteFiles" as rf{
 name = "Remote Files"
 subfolders: ArrayList<Folder> = []
 files: ArrayList<File> = []
 }
-object phalcon {
+object "phal:phalcon" as ph{
 name = ".phalcon"
 subfolders: ArrayList<Folder> = []
 files: ArrayList<File> = []
 }
-object cache{
+object "caf:cache" as ch{
 name = "cache"
 subfolders: ArrayList<Folder> = []
 files: ArrayList<File> = []
 }
-object public {
+object "pub:public" as pb {
 name = "public"
 subfolders: ArrayList<Folder> = []
 files: ArrayList<File> = [.htaccess, .htrouter.php, index.html]
 }
-object htaccess {
+object "hta:htaccess" as ht {
 name = ".htaccess"
 }
-object htrouter {
+object "htr:htrouter" as hr {
 name = ".htrouter.php"
 }
-object index {
+object "ind:index" as id{
 name = "index.html"
 }
-phpDemo1 *-- sourceFiles : contains
-phpDemo1 *-- includePath : contains
-phpDemo1 *-- remoteFiles : contains
-sourceFiles *-- phalcon : contains
-sourceFiles *-- cache : contains
-sourceFiles *-- public : contains
-public *-- htaccess : contains
-public *-- htrouter : contains
-public *-- index : contains
+dem *-- sf : contains
+dem *-- ip : contains
+dem *-- rf : contains
+sf *-- ph : contains
+sf *-- ch : contains
+sf *-- pb : contains
+pb *-- ht : contains
+pb *-- hr : contains
+pb *-- id : contains
 @enduml
